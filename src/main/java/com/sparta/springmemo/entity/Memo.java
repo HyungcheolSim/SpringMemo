@@ -1,6 +1,6 @@
 package com.sparta.springmemo.entity;
 
-import com.sparta.springmemo.dto.MemoRequestDTO;
+import com.sparta.springmemo.dto.MemoRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,12 +13,12 @@ public class Memo {
     private String username;
     private String contents;
 
-    public Memo(MemoRequestDTO requestDto) {
+    public Memo(MemoRequestDto requestDto) {
         this.username=requestDto.getUsername();
         this.contents=requestDto.getContents();
     }
 
-    public void update(MemoRequestDTO requestDto) {
+    public void update(MemoRequestDto requestDto) {
         this.username=requestDto.getUsername();
         this.contents=requestDto.getContents();
     }
