@@ -8,5 +8,6 @@ import java.util.List;
 //jpa repository를 extends 함으로써 @repository 어노테이션이 붙은 효과
 public interface MemoRepository extends JpaRepository<Memo,Long> {
     List<Memo> findAllByOrderByModifiedAtDesc();
+    List<Memo> findAllByContentsContainsOrderByModifiedAtDesc(String keyword);
 
 }
