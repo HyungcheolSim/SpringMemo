@@ -4,12 +4,15 @@ import com.sparta.springmemo.dto.MemoRequestDto;
 import com.sparta.springmemo.dto.MemoResponseDto;
 import com.sparta.springmemo.entity.Memo;
 import com.sparta.springmemo.repository.MemoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MemoService {
     private final MemoRepository memoRepository;
-
+    @Autowired
     public MemoService(MemoRepository memoRepository) {
         this.memoRepository=memoRepository;
     }
