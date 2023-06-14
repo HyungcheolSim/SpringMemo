@@ -19,8 +19,11 @@ repositories {
 }
 
 dependencies {
-// MySQL
-    implementation 'mysql:mysql-connector-java:8.0.28'
+    // MySQL
+    // exclude 한 건 보안취약점있는 패키지 제외한 것
+    implementation ('mysql:mysql-connector-java:8.0.28'){
+        exclude group: 'com.google.protobuf', module: 'protobuf-java'
+    }
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
